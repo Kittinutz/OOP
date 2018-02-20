@@ -40,8 +40,8 @@ public class Point {
 	public void setZ(float z){
 		this.z = z;
 	}
-	public void showPoint() {
-		System.out.println(" x : " +x+" y : " +y+" z : " + z);
+	public void showPoint(String pt) {
+		System.out.println(pt+" x : " +x+" y : " +y+" z : " + z);
 		
 	}
 	public void Movewithvalue(float x, float y, float z){
