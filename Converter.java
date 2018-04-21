@@ -3,20 +3,20 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Converter extends JFrame implements ActionListener{
+	Container container;
 	JButton btnConverter;
 	JLabel myLabel;
 	JTextField myTextField;
-	Container container;
 	int mycount;
 	JTextArea Mytext;
 
 	public Converter(){
 		container = getContentPane();
 		container.setLayout(new FlowLayout(FlowLayout.CENTER,10,20));
-		mycount = 0;
+		mycount = 1;
+		myTextField = new JTextField(Integer.toString(mycount),10); //กล่องข้อความ
 		btnConverter = new JButton("Convert!!"); //ปุ่มไอสัส
 		myLabel = new JLabel("Distance in miles: "); //ข้อความ
-		myTextField = new JTextField(Integer.toString(mycount),10); //กล่องข้อความ
 		Mytext = new JTextArea(10,30);
 
 		btnConverter.addActionListener(this); //function ปุ่มกด
@@ -32,7 +32,7 @@ public class Converter extends JFrame implements ActionListener{
 	}
 	public void actionPerformed(ActionEvent e){
 		String str = e.getActionCommand();
-		Double newValue = Double.parseDouble(myTextField.getText());
+		Double newValue = Double.parseDouble(myTextField.getText()); //.gettext "1" 
 		String input = myTextField.getText();
 		 newValue = newValue * 1.6;
 	
