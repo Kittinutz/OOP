@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Converter extends JFrame implements ActionListener{
+public class Converter extends JFrame {
 	Container container;
 	JButton btnConverter;
 	JLabel myLabel;
@@ -18,8 +18,19 @@ public class Converter extends JFrame implements ActionListener{
 		btnConverter = new JButton("Convert!!"); //ปุ่มไอสัส
 		myLabel = new JLabel("Distance in miles: "); //ข้อความ
 		Mytext = new JTextArea(10,30);
-
-		btnConverter.addActionListener(this); //function ปุ่มกด
+	
+		btnConverter.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt) {
+				Double newValue = Double.parseDouble(myTextField.getText()); //.gettext "1" 
+				String input = myTextField.getText();
+				 newValue = newValue * 1.6;
+	
+		// mycount = newCount;
+	
+			Mytext.setText(input+" "+"miles "+"equals"+Double.toString(newValue)+" Kilometers");
+	
+			}
+		}); 
 
 		container.add(myLabel); //container add ข้อความ
 		container.add(myTextField); //กล่องข้อความ
@@ -30,17 +41,7 @@ public class Converter extends JFrame implements ActionListener{
 		setSize(500,600);
 		setVisible(true);
 	}
-	public void actionPerformed(ActionEvent e){
-		String str = e.getActionCommand();
-		Double newValue = Double.parseDouble(myTextField.getText()); //.gettext "1" 
-		String input = myTextField.getText();
-		 newValue = newValue * 1.6;
 	
-		// mycount = newCount;
-		if(str.equals("Convert!!")){
-			Mytext.setText(input+" "+"miles "+"equals"+Double.toString(newValue)+" Kilometers");
-		}
-	}
 
 	public static void main(String args[]){
 		new Converter();

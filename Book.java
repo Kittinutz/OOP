@@ -8,10 +8,10 @@ public class Book{
 		this.pagenumber = pagenumber;
 		this.Author = Author;
 	}
-	public Book(String title, int pagenumber){
+	public Book(String title, int radius){
 		//รับ  title pagenumber
 		this.title  = title;
-		this.pagenumber = pagenumber;
+		this.pagenumber = radius;
 	}
 	public Book(String title){
 		//รับแค่ title
