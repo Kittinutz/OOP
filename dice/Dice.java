@@ -1,4 +1,5 @@
-public class Dice{
+import java.lang.Math; 
+public class Dice {
 	private int face;
 
 	public Dice(){
@@ -6,7 +7,7 @@ public class Dice{
 	}
 
 	public void roll(){
-		this.face = random;
+		this.face = (int)(6 * Math.random());
 	}
 
 	public int getFace(){
