@@ -15,7 +15,7 @@ public class Dicebox{
 		}
 	}
 
-	public int gettotal(){
+	public int getTotal(){
 		int total=0;
 		for(Dice dice : dices){
 			total += dice.getface();
