@@ -9,7 +9,7 @@ public class Dice{
 		this.face = random;
 	}
 
-	public int getface(){
+	public int getFace(){
 		return this.face;
 	}
 
