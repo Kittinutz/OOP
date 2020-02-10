@@ -7,7 +7,7 @@ public class Dice {
 	}
 
 	public void roll(){
-		this.face = (int)(6 * Math.random());
+		this.face = (int)7 * Math.random()); //0-6
 	}
 
 	public int getFace(){
